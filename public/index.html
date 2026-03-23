@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="S.Borjas - Full Stack Developer & Digital Creator. Building innovative mobile apps, web solutions, and blockchain experiences.">
+    <meta name="keywords" content="developer, flutter, firebase, web3, blockchain, mobile apps, full stack">
+    <meta name="author" content="S. Borjas">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="StellarStudio.SB - S.Borjas Portfolio">
+    <meta property="og:description" content="Full Stack Developer & Digital Creator">
+    <meta property="og:image" content="/assets/icons/og-image.png">
+
+    <title>StellarStudio.SB | S.Borjas - Full Stack Developer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+</head>
+<body>
+    <!-- Sparkle Background Canvas -->
+    <canvas id="sparkle-canvas"></canvas>
+
+    <!-- Background Switcher Panel -->
+    <div class="bg-switcher" id="bg-switcher">
+        <button class="bg-toggle" id="bg-toggle" title="Change Background">
+            <i class="fas fa-palette"></i>
+        </button>
+        <div class="bg-options" id="bg-options">
+            <h4>Background Style</h4>
+            <button class="bg-option active" data-bg="sparkle">
+                <span class="bg-preview sparkle-preview"></span>
+                Black Sparkle
+            </button>
+            <button class="bg-option" data-bg="navy">
+                <span class="bg-preview navy-preview"></span>
+                Deep Navy
+            </button>
+            <button class="bg-option" data-bg="charcoal">
+                <span class="bg-preview charcoal-preview"></span>
+                Charcoal
+            </button>
+            <button class="bg-option" data-bg="slate">
+                <span class="bg-preview slate-preview"></span>
+                Dark Slate
+            </button>
+            <button class="bg-option" data-bg="white">
+                <span class="bg-preview white-preview"></span>
+                Clean White
+            </button>
+            <button class="bg-option" data-bg="cream">
+                <span class="bg-preview cream-preview"></span>
+                Off-White
+            </button>
+            <button class="bg-option" data-bg="gray">
+                <span class="bg-preview gray-preview"></span>
+                Light Gray
+            </button>
+            <button class="bg-option" data-bg="mesh">
+                <span class="bg-preview mesh-preview"></span>
+                Mesh Gradient
+            </button>
+            <button class="bg-option" data-bg="grid">
+                <span class="bg-preview grid-preview"></span>
+                Geometric Grid
+            </button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="https://firebasestorage.googleapis.com/v0/b/personalweb-f0fb2.firebasestorage.app/o/WhatsApp%20Image%202025-12-04%20at%2001.43.59_7ea315c5.jpg?alt=media"
+                     alt="S. Borjas"
+                     class="nav-profile-img">
+                <span class="logo-text">StellarStudio</span><span class="logo-accent">.SB</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#causes" class="nav-link">Causes</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="resume.html" class="nav-resume-btn">Resume</a>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <!-- Animated Logo -->
+            <div class="logo-container">
+                <div class="logo-glow"></div>
+                <div class="logo-inner">
+                    <img src="https://firebasestorage.googleapis.com/v0/b/personalweb-f0fb2.firebasestorage.app/o/transparent_logo_1.png?alt=media"
+                         alt="StellarStudio Logo"
+                         class="logo-image">
+                </div>
+            </div>
+
+            <h1 class="hero-title">
+                <span class="greeting">Hello, I'm</span>
+                <span class="name">S. Borjas</span>
+            </h1>
+
+            <div class="hero-subtitle">
+                <span class="typing-text"></span>
+                <span class="cursor">|</span>
+            </div>
+
+            <p class="hero-description">
+                Full Stack Developer crafting innovative mobile applications,
+                web experiences, and blockchain solutions.
+            </p>
+
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> View My Work
+                </a>
+                <a href="resume.html" class="btn btn-secondary">
+                    <i class="fas fa-file-alt"></i> Resume
+                </a>
+            </div>
+
+            <div class="hero-social">
+                <a href="https://www.linkedin.com/in/sborjasto/" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/superbigroach" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://x.com/sb_lucilla" target="_blank" class="social-link" aria-label="X/Twitter">
+                    <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://t.me/sb_lucilla" target="_blank" class="social-link" aria-label="Telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="https://tiktok.com/@sb_lucilla" target="_blank" class="social-link" aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">01.</span> About Me
+            </h2>
+
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-frame">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/personalweb-f0fb2.firebasestorage.app/o/WhatsApp%20Image%202025-12-04%20at%2001.43.59_7ea315c5.jpg?alt=media"
+                             alt="S. Borjas - Profile Photo"
+                             class="profile-image"
+                             loading="lazy">
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <p>
+                        I'm a passionate <span class="highlight">Full Stack Developer</span> with expertise in
+                        building scalable mobile applications and web solutions. My journey in tech started
+                        with a curiosity for how things work, and has evolved into creating products that
+                        impact thousands of users.
+                    </p>
+                    <p>
+                        Currently, I specialize in <span class="highlight">Flutter</span> for cross-platform
+                        mobile development, <span class="highlight">Firebase</span> for backend services,
+                        and <span class="highlight">Web3</span> technologies for blockchain integration.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me exploring new technologies, contributing to
+                        open-source projects, or helping startups bring their ideas to life.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100K+</span>
+                            <span class="stat-label">Users Impacted</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">02.</span> Skills & Technologies
+            </h2>
+
+            <div class="skills-grid">
+                <!-- Mobile Development -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Development</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Flutter</span>
+                        <span class="tag">Dart</span>
+                        <span class="tag">iOS</span>
+                        <span class="tag">Android</span>
+                        <span class="tag">React Native</span>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend & Cloud</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Firebase</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">GCP</span>
+                        <span class="tag">AWS</span>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <div class="skill-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Next.js</span>
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">Tailwind</span>
+                    </div>
+                </div>
+
+                <!-- Blockchain -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Web3 & Blockchain</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Solidity</span>
+                        <span class="tag">Ethereum</span>
+                        <span class="tag">Base</span>
+                        <span class="tag">Smart Contracts</span>
+                        <span class="tag">USDC</span>
+                    </div>
+                </div>
+
+                <!-- AI & ML -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI & Machine Learning</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Gemini AI</span>
+                        <span class="tag">Vertex AI</span>
+                        <span class="tag">XGBoost</span>
+                        <span class="tag">LSTM</span>
+                        <span class="tag">TFT</span>
+                        <span class="tag">PyTorch</span>
+                        <span class="tag">scikit-learn</span>
+                        <span class="tag">Claude</span>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Git</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">CI/CD</span>
+                        <span class="tag">Figma</span>
+                        <span class="tag">Jira</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Accomplishments Section -->
+    <section id="accomplishments" class="section accomplishments">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">03.</span> Recent Accomplishments
+            </h2>
+
+            <!-- Featured Achievement: Lucilla -->
+            <div class="achievement-featured">
+                <div class="achievement-badge">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="achievement-content">
+                    <h3>Lucilla - 1M+ Lines of Code</h3>
+                    <p>Built entirely solo, featuring cutting-edge AI generative tech, real-time voice streaming, Circle modular wallets, USDC payments, and multi-agent systems. Available in 17 languages across 100+ countries.</p>
+                    <div class="achievement-tags">
+                        <span>Solo Developer</span>
+                        <span>AI Generation</span>
+                        <span>Voice Streaming</span>
+                        <span>Circle Wallets</span>
+                        <span>Multi-Agent Systems</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accomplishments-grid">
+                <!-- Google Cloud Partner -->
+                <div class="accomplishment-card">
+                    <div class="accomplishment-icon google">
+                        <i class="fab fa-google"></i>
+                    </div>
+                    <div class="accomplishment-content">
+                        <span class="accomplishment-year">2025</span>
+                        <h4>Google Cloud Partner</h4>
+                        <p>Proud partner leveraging Google Cloud infrastructure and services</p>
+                    </div>
+                </div>
+
+                <!-- Google AI Innovate -->
+                <div class="accomplishment-card">
+                    <div class="accomplishment-icon google">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="accomplishment-content">
+                        <span class="accomplishment-year">Summer 2025</span>
+                        <h4>Google AI Innovate Program</h4>
+                        <p>Selected for Google's first-ever AI Innovate Program for Startups</p>
+                    </div>
+                </div>
+
+                <!-- Jason Calacanis Incubator -->
+                <div class="accomplishment-card">
+                    <div class="accomplishment-icon incubator">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="accomplishment-content">
+                        <span class="accomplishment-year">Spring-Summer 2025</span>
+                        <h4>Jason Calacanis Incubator</h4>
+                        <p>Proudly completed the renowned startup incubator program</p>
+                    </div>
+                </div>
+
+                <!-- Circle Early Access -->
+                <div class="accomplishment-card">
+                    <div class="accomplishment-icon circle">
+                        <i class="fas fa-circle-dollar-to-slot"></i>
+                    </div>
+                    <div class="accomplishment-content">
+                        <span class="accomplishment-year">2025</span>
+                        <h4>Circle Early Access Tester</h4>
+                        <p>Tested early access features for Circle business services and modular wallets</p>
+                    </div>
+                </div>
+
+                <!-- Coinbase Business -->
+                <div class="accomplishment-card">
+                    <div class="accomplishment-icon coinbase">
+                        <i class="fab fa-bitcoin"></i>
+                    </div>
+                    <div class="accomplishment-content">
+                        <span class="accomplishment-year">2025</span>
+                        <h4>Coinbase Business Services</h4>
+                        <p>Worked with and tested Coinbase business integration features</p>
+                    </div>
+                </div>
+
+                <!-- ARC Testnet Smart Contract -->
+                <div class="accomplishment-card">
+                    <div class="accomplishment-icon circle">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <div class="accomplishment-content">
+                        <span class="accomplishment-year">2025</span>
+                        <h4>ARC Testnet Pioneer</h4>
+                        <p>Created one of the first smart contracts on Circle's ARC testnet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">04.</span> Featured Projects
+            </h2>
+
+            <div class="projects-grid">
+                <!-- Project 1: Lucilla -->
+                <article class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://lucilla.ca" target="_blank" class="project-link" aria-label="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <img src="https://firebasestorage.googleapis.com/v0/b/personalweb-f0fb2.firebasestorage.app/o/WhatsApp%20Image%202025-12-03%20at%2017.18.13_9cfb8fb7.jpg?alt=media" alt="Lucilla Fitness App" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-type">Featured Project</span>
+                        <h3 class="project-title">Lucilla - Fitness Competition App</h3>
+                        <p class="project-description">
+                            A global fitness competition platform enabling step-based challenges with
+                            real-money stakes. Features USDC payments, multi-language support (17 languages),
+                            and availability in 100+ countries.
+                        </p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Web3</span>
+                            <span>Circle USDC</span>
+                            <span>Gemini AI</span>
+                        </div>
+                        <div class="project-cta">
+                            <a href="https://lucilla.ca" target="_blank" class="dashboard-badge">
+                                <i class="fas fa-globe"></i> Visit Website
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project: Telamar Trading Dashboard -->
+                <article class="project-card featured">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://telamar.web.app" target="_blank" class="project-link" aria-label="View Dashboard">
+                                    <i class="fas fa-chart-line"></i>
+                                </a>
+                                <a href="https://t.me/TelamarTradingAndResearch" target="_blank" class="project-link" aria-label="Join Telegram">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <img src="https://firebasestorage.googleapis.com/v0/b/personalweb-f0fb2.firebasestorage.app/o/WhatsApp%20Image%202025-12-11%20at%2019.15.10_db631aed.jpg?alt=media&token=266cf116-c3c3-428f-a28b-1e82faf3309b" alt="Telamar Trading Dashboard" class="project-img" style="object-fit: cover; object-position: center;">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-type">Featured - ML Trading System</span>
+                        <h3 class="project-title">Telamar Trading & Research</h3>
+                        <p class="project-description">
+                            24/7 autonomous crypto trading bot with multi-model ML ensemble (XGBoost, LSTM, TFT).
+                            Features self-learning parameter optimization, economic calendar protection, ATR trailing stops,
+                            and live Telegram signals. Trading 22 pairs on Binance Futures.
+                        </p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>XGBoost</span>
+                            <span>LSTM</span>
+                            <span>TFT</span>
+                            <span>Flutter Web</span>
+                            <span>Telegram Bot</span>
+                            <span>GCP</span>
+                        </div>
+                        <div class="project-cta">
+                            <a href="https://telamar.web.app" target="_blank" class="dashboard-badge">
+                                <i class="fas fa-chart-line"></i> View Dashboard
+                            </a>
+                            <a href="https://t.me/TelamarTradingAndResearch" target="_blank" class="telegram-badge">
+                                <i class="fab fa-telegram"></i> Join Signals
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Bank App -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://bankapp-de728.firebaseapp.com" target="_blank" class="project-link" aria-label="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <img src="https://firebasestorage.googleapis.com/v0/b/personalweb-f0fb2.firebasestorage.app/o/chrome_OVy9Z7DB34.png?alt=media" alt="Digital Banking Platform" class="project-img">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-type">FinTech - Central America</span>
+                        <h3 class="project-title">Digital Banking Platform</h3>
+                        <p class="project-description">
+                            Mobile & web banking app rivaling top Central American banks with modern financial
+                            services, secure transactions, real-time notifications, and competitive features.
+                        </p>
+                        <div class="project-tech">
+                            <span>Flutter</span>
+                            <span>Firebase</span>
+                            <span>Plaid API</span>
+                            <span>Stripe</span>
+                        </div>
+                        <div class="project-cta">
+                            <a href="https://bankapp-de728.firebaseapp.com" target="_blank" class="dashboard-badge">
+                                <i class="fas fa-globe"></i> Visit Website
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: LabiosRojosByNadia -->
+                <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://nadia-4aa22.firebaseapp.com" target="_blank" class="project-link" aria-label="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                </div>
+                            </div>
+                            <img src="https://firebasestorage.googleapis.com/v0/b/personalweb-f0fb2.firebasestorage.app/o/WhatsApp%20Image%202025-11-25%20at%2013.30.55_bb3576e0.jpg?alt=media" alt="LabiosRojos by Nadia" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-type">E-Commerce</span>
+                            <h3 class="project-title">LabiosRojos by Nadia</h3>
+                            <p class="project-description">
+                                Premium beauty and cosmetics e-commerce platform featuring product catalog,
+                                secure checkout, inventory management, and customer loyalty programs.
+                            </p>
+                            <div class="project-tech">
+                                <span>Flutter</span>
+                                <span>Firebase</span>
+                                <span>Stripe</span>
+                                <span>Analytics</span>
+                            </div>
+                        <div class="project-cta">
+                            <a href="https://nadia-4aa22.firebaseapp.com" target="_blank" class="dashboard-badge">
+                                <i class="fas fa-globe"></i> Visit Website
+                            </a>
+                        </div>
+                        </div>
+                    </article>
+
+                <!-- Project 4: MiPollo -->
+                <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://mipollo-56d90.web.app" target="_blank" class="project-link" aria-label="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                </div>
+                            </div>
+                            <img src="https://firebasestorage.googleapis.com/v0/b/personalweb-f0fb2.firebasestorage.app/o/WhatsApp%20Image%202025-12-04%20at%2011.49.31_c9505bb8.jpg?alt=media" alt="MiPollo Restaurant" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-type">Food & Restaurant</span>
+                            <h3 class="project-title">MiPollo - Restaurant Platform</h3>
+                            <p class="project-description">
+                                Complete restaurant management system with online ordering, real-time menu updates,
+                                order tracking, delivery integration, and customer engagement features.
+                            </p>
+                            <div class="project-tech">
+                                <span>Flutter</span>
+                                <span>Firebase</span>
+                                <span>Google Maps</span>
+                                <span>Push Notifications</span>
+                            </div>
+                        <div class="project-cta">
+                            <a href="https://mipollo-56d90.web.app" target="_blank" class="dashboard-badge">
+                                <i class="fas fa-globe"></i> Visit Website
+                            </a>
+                        </div>
+                        </div>
+                    </article>
+
+                <!-- Project 5: Cremosito Mio -->
+                <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://cremositomio-479121.web.app" target="_blank" class="project-link" aria-label="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                </div>
+                            </div>
+                            <img src="https://firebasestorage.googleapis.com/v0/b/personalweb-f0fb2.firebasestorage.app/o/WhatsApp%20Image%202025-11-23%20at%2016.29.04_a3357403.jpg?alt=media" alt="Cremosito Mio" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-type">Food & Beverage</span>
+                            <h3 class="project-title">Cremosito Mio</h3>
+                            <p class="project-description">
+                                Artisan ice cream shop platform with menu showcase, online ordering,
+                                location finder, and seasonal specials management.
+                            </p>
+                            <div class="project-tech">
+                                <span>Flutter</span>
+                                <span>Firebase</span>
+                                <span>Google Maps</span>
+                            </div>
+                        <div class="project-cta">
+                            <a href="https://cremositomio-479121.web.app" target="_blank" class="dashboard-badge">
+                                <i class="fas fa-globe"></i> Visit Website
+                            </a>
+                        </div>
+                        </div>
+                    </article>
+
+                <!-- Project 6: Nilda's Recipes -->
+                <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://nildasrecipees.com" target="_blank" class="project-link" aria-label="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                </div>
+                            </div>
+                            <img src="https://firebasestorage.googleapis.com/v0/b/personalweb-f0fb2.firebasestorage.app/o/chrome_DRjwSXsutC.png?alt=media" alt="Nilda's Recipes" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-type">Lifestyle</span>
+                            <h3 class="project-title">Nilda's Recipes</h3>
+                            <p class="project-description">
+                                Family recipe collection platform preserving culinary traditions with
+                                searchable recipes, ingredient lists, and step-by-step cooking guides.
+                            </p>
+                            <div class="project-tech">
+                                <span>Web</span>
+                                <span>Firebase</span>
+                                <span>SEO</span>
+                            </div>
+                        <div class="project-cta">
+                            <a href="https://nildasrecipees.com" target="_blank" class="dashboard-badge">
+                                <i class="fas fa-globe"></i> Visit Website
+                            </a>
+                        </div>
+                        </div>
+                    </article>
+
+                <!-- Project 7: Dirty Driveway -->
+                <article class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://dirtydriveway.ca" target="_blank" class="project-link" aria-label="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                </div>
+                            </div>
+                            <img src="https://firebasestorage.googleapis.com/v0/b/personalweb-f0fb2.firebasestorage.app/o/chrome_RgzoMGWGoo.png?alt=media" alt="Dirty Driveway" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-type">Service Business</span>
+                            <h3 class="project-title">Dirty Driveway</h3>
+                            <p class="project-description">
+                                Professional pressure washing and exterior cleaning service platform
+                                with online booking, quote requests, and service area coverage.
+                            </p>
+                            <div class="project-tech">
+                                <span>Web</span>
+                                <span>Booking System</span>
+                                <span>SEO</span>
+                            </div>
+                        <div class="project-cta">
+                            <a href="https://dirtydriveway.ca" target="_blank" class="dashboard-badge">
+                                <i class="fas fa-globe"></i> Visit Website
+                            </a>
+                        </div>
+                        </div>
+                    </article>
+
+                <!-- Project 8: CineLingua - Hackathon -->
+                <article class="project-card featured">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="https://cine-lingua.vercel.app" target="_blank" class="project-link" aria-label="Visit Website">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                                </div>
+                            </div>
+                            <img src="https://firebasestorage.googleapis.com/v0/b/personalweb-f0fb2.firebasestorage.app/o/chrome_Sf0uqnBTFx.png?alt=media" alt="CineLingua" class="project-img">
+                        </div>
+                        <div class="project-content">
+                            <span class="project-type">Hackathon 2025 - Agentics Foundation</span>
+                            <h3 class="project-title">CineLingua - AI Language Learning</h3>
+                            <p class="project-description">
+                                Learn French through cinema with AI-powered tutoring. Browse films from 8 Francophone
+                                regions with Gemini-generated vocabulary and language materials. Built for TV5 Monde Hackathon.
+                            </p>
+                            <div class="project-tech">
+                                <span>Gemini AI</span>
+                                <span>Next.js</span>
+                                <span>TV5 Monde</span>
+                                <span>Vercel</span>
+                            </div>
+                        <div class="project-cta">
+                            <a href="https://cine-lingua.vercel.app" target="_blank" class="dashboard-badge">
+                                <i class="fas fa-globe"></i> Visit Website
+                            </a>
+                        </div>
+                        </div>
+                    </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Causes & Interests Section -->
+    <section id="causes" class="section causes">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">05.</span> Causes & Interests
+            </h2>
+            <p class="section-subtitle">
+                Building technology that makes a difference in people's lives
+            </p>
+
+            <div class="causes-grid">
+                <!-- Food Insecurity -->
+                <div class="cause-card">
+                    <div class="cause-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Food Insecurity</h3>
+                    <p>Leveraging technology to combat hunger and improve food access for underserved communities.</p>
+                </div>
+
+                <!-- Agentic Grocery -->
+                <div class="cause-card">
+                    <div class="cause-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Agentic Grocery</h3>
+                    <p>AI-powered shopping assistants that help families optimize nutrition and reduce food waste.</p>
+                </div>
+
+                <!-- Elderly Care -->
+                <div class="cause-card">
+                    <div class="cause-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Caring for Our Elderly</h3>
+                    <p>Technology solutions to improve quality of life and independence for senior citizens.</p>
+                </div>
+
+                <!-- Youth Empowerment -->
+                <div class="cause-card">
+                    <div class="cause-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Empowering Youth with AI</h3>
+                    <p>Making AI education accessible to young people and preparing them for the future of work.</p>
+                </div>
+
+                <!-- Robotics -->
+                <div class="cause-card">
+                    <div class="cause-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Robotics</h3>
+                    <p>Building robots that assist humans in everyday tasks and dangerous environments.</p>
+                </div>
+
+                <!-- Computer Vision -->
+                <div class="cause-card">
+                    <div class="cause-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Computer Vision</h3>
+                    <p>Visual AI systems for healthcare, safety, accessibility, and automation applications.</p>
+                </div>
+
+                <!-- Agentics Foundation -->
+                <div class="cause-card featured-cause">
+                    <div class="cause-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Agentics Foundation</h3>
+                    <p>Proud member since Summer 2025, actively engaging with the global AI agents community. Had the privilege of meeting founder Reuven Cohen and connecting with passionate agentics members from across the globe. Big supporter of the mission to build autonomous AI agents that work alongside humans to solve real-world problems.</p>
+                    <div class="cause-tags">
+                        <span>Member Since 2025</span>
+                        <span>AI Agents</span>
+                        <span>Global Community</span>
+                        <span>Open Source</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">06.</span> Experience
+            </h2>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Founder & Lead Developer</h3>
+                            <span class="timeline-company">Lucilla Technologies (AI Founded)</span>
+                        </div>
+                        <span class="timeline-date">2025 - Present</span>
+                        <ul class="timeline-description">
+                            <li>Solo-built 1M+ lines of production code for global fitness platform</li>
+                            <li>Implemented USDC payment integration with Circle's modular wallets</li>
+                            <li>Developed AI-powered features using Gemini and Vertex AI</li>
+                            <li>Serving 100+ countries with 17 language support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Equities Trader</h3>
+                            <span class="timeline-company">Trading Firm</span>
+                        </div>
+                        <span class="timeline-date">2019 - 2023</span>
+                        <ul class="timeline-description">
+                            <li>Managed high-volume trades with $250M+ total trade volume</li>
+                            <li>Built automated trading algorithms using Python and Apache Kafka</li>
+                            <li>Developed computer vision tools for market analysis</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Full Stack Developer</h3>
+                            <span class="timeline-company">Google Cloud Partner | Freelance</span>
+                        </div>
+                        <span class="timeline-date">2019 - Present</span>
+                        <ul class="timeline-description">
+                            <li>Google Cloud Partner building Gen AI & multi-agent systems</li>
+                            <li>Digital wallet integrations with Circle USDC & ARC Network</li>
+                            <li>Voice streaming, real-time transactions & PCI-DSS compliance</li>
+                            <li>Delivered 10+ production apps with Flutter, Firebase & Web3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Volunteer Experience -->
+            <h3 class="subsection-title">
+                <i class="fas fa-hands-helping"></i> Volunteer Experience
+            </h3>
+
+            <!-- Featured: FIFA World Cup -->
+            <div class="volunteer-card volunteer-featured">
+                <div class="volunteer-icon">
+                    <i class="fas fa-futbol"></i>
+                </div>
+                <div class="volunteer-content">
+                    <h4>2026 FIFA World Cup Volunteer</h4>
+                    <span class="volunteer-location">Toronto, Canada</span>
+                    <span class="volunteer-date">2026 (Upcoming)</span>
+                    <p>Registered volunteer for the historic FIFA World Cup hosted across North America. Excited to be part of this global celebration of sport and welcome fans from around the world. Join me there!</p>
+                </div>
+            </div>
+
+            <div class="volunteer-grid">
+                <div class="volunteer-card">
+                    <div class="volunteer-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <div class="volunteer-content">
+                        <h4>Eden Community Food Bank</h4>
+                        <span class="volunteer-location">Mississauga, ON</span>
+                        <span class="volunteer-date">Past</span>
+                        <p>Helped combat food insecurity, assisting with food distribution and supporting families in need.</p>
+                    </div>
+                </div>
+
+                <div class="volunteer-card">
+                    <div class="volunteer-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="volunteer-content">
+                        <h4>Immigrants Working Centre</h4>
+                        <span class="volunteer-location">Hamilton, ON</span>
+                        <span class="volunteer-date">Past</span>
+                        <p>Supported newcomers to Canada with settlement services and integration programs.</p>
+                    </div>
+                </div>
+
+                <div class="volunteer-card">
+                    <div class="volunteer-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <div class="volunteer-content">
+                        <h4>Bread and Honey Festival</h4>
+                        <span class="volunteer-location">Mississauga, ON</span>
+                        <span class="volunteer-date">Past</span>
+                        <p>Contributed to Mississauga's annual community festival celebrating local culture and food.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">07.</span> Get In Touch
+            </h2>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <p>
+                        I'm currently available for freelance projects, consulting, and full-time
+                        opportunities. Whether you have a project in mind or just want to say hello,
+                        feel free to reach out!
+                    </p>
+
+                    <div class="contact-methods">
+                        <a href="mailto:contact@stellarstudio.sb" class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@stellarstudio.sb</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sborjasto/" class="contact-method">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn - S. Borjas</span>
+                        </a>
+                        <a href="https://github.com/superbigroach" class="contact-method">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub - superbigroach</span>
+                        </a>
+                        <a href="https://t.me/sb_lucilla" class="contact-method">
+                            <i class="fab fa-telegram"></i>
+                            <span>Telegram - @sb_lucilla</span>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder=" ">
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" ">
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    Designed & Built by <span class="highlight">S. Borjas</span>
+                </p>
+                <p class="footer-copyright">
+                    &copy; 2025 StellarStudio.SB. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/sparkle.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/physics.js"></script>
+</body>
+</html>

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S. Borjas - Resume | Full Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: #1a1a2e;
+            line-height: 1.6;
+            background: #ffffff;
+        }
+
+        .resume-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        /* Header */
+        .resume-header {
+            text-align: center;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #06b6d4;
+            margin-bottom: 30px;
+        }
+
+        .resume-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .resume-header .title {
+            font-size: 1.25rem;
+            color: #06b6d4;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .contact-info a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            color: #06b6d4;
+        }
+
+        .contact-info i {
+            margin-right: 6px;
+            color: #06b6d4;
+        }
+
+        /* Sections */
+        .resume-section {
+            margin-bottom: 30px;
+        }
+
+        .resume-section h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #06b6d4;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 16px;
+        }
+
+        /* Summary */
+        .summary p {
+            color: #444;
+            font-size: 0.95rem;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill-category h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .skill-category ul {
+            list-style: none;
+        }
+
+        .skill-category li {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 4px;
+            padding-left: 12px;
+            position: relative;
+        }
+
+        .skill-category li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 4px;
+            height: 4px;
+            background: #06b6d4;
+            border-radius: 50%;
+        }
+
+        /* Experience & Projects */
+        .experience-item, .project-item {
+            margin-bottom: 20px;
+        }
+
+        .experience-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+        }
+
+        .experience-header h3, .project-header h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .experience-header .company {
+            color: #06b6d4;
+            font-weight: 500;
+        }
+
+        .experience-header .date, .project-header .date {
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        .experience-item p, .project-item p {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .experience-item ul, .project-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-item li, .project-item li {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 4px;
+            padding-left: 16px;
+            position: relative;
+        }
+
+        .experience-item li::before, .project-item li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: #06b6d4;
+            font-weight: bold;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .tech-tags span {
+            font-size: 0.75rem;
+            color: #06b6d4;
+            background: rgba(6, 182, 212, 0.1);
+            padding: 2px 10px;
+            border-radius: 12px;
+        }
+
+        /* Accomplishments */
+        .accomplishments-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .accomplishment-item {
+            display: flex;
+            gap: 12px;
+            padding: 10px;
+            background: rgba(6, 182, 212, 0.05);
+            border-radius: 8px;
+            border-left: 3px solid #06b6d4;
+        }
+
+        .accomplishment-icon {
+            color: #06b6d4;
+            font-size: 1.1rem;
+            min-width: 24px;
+        }
+
+        .accomplishment-content strong {
+            font-size: 0.9rem;
+            color: #1a1a2e;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .accomplishment-content p {
+            font-size: 0.8rem;
+            color: #666;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Interests */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .interest-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .interest-item i {
+            color: #06b6d4;
+            width: 20px;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+            }
+            .resume-container {
+                padding: 20px;
+            }
+            .no-print {
+                display: none !important;
+            }
+        }
+
+        /* Download button */
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #06b6d4;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: #1a1a2e;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            .interests-grid {
+                grid-template-columns: 1fr;
+            }
+            .accomplishments-grid {
+                grid-template-columns: 1fr;
+            }
+            .experience-header, .project-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation buttons -->
+    <a href="index.html" class="back-btn no-print">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+    </a>
+    <a href="javascript:window.print()" class="download-btn no-print">
+        <i class="fas fa-download"></i> Download PDF
+    </a>
+
+    <div class="resume-container">
+        <!-- Header -->
+        <header class="resume-header">
+            <h1>S. Borjas</h1>
+            <p class="title">Full Stack Developer | Web3 & Wallet Infrastructure | AI Solutions</p>
+            <div class="contact-info">
+                <span><i class="fas fa-envelope"></i> s.borjas@lucilla.ca</span>
+                <span><i class="fas fa-globe"></i> stellarstudio.sb</span>
+                <a href="https://linkedin.com/in/sborjas" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://github.com/sborjas" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </header>
+
+        <!-- Summary -->
+        <section class="resume-section summary">
+            <h2><i class="fas fa-user"></i> Professional Summary</h2>
+            <p>
+                <strong>Full Stack Developer with 1.7M+ lines of production code</strong> and 6 years of experience
+                building mobile apps, web platforms, and Web3 solutions. Google Cloud Partner and graduate of the
+                Jason Calacanis Incubator Program. Specialized in Flutter, Firebase, Circle USDC wallets, and
+                AI-powered applications. Early access tester for Circle and Coinbase, with smart contracts deployed
+                on Circle's ARC testnet. Seeking Staff Engineer roles in Web3/wallet infrastructure, startup
+                founding teams, or high-impact consulting engagements—particularly at Circle, xAI, innovative banks,
+                or high-growth Web3 startups.
+            </p>
+        </section>
+
+        <!-- Accomplishments -->
+        <section class="resume-section">
+            <h2><i class="fas fa-trophy"></i> Key Accomplishments</h2>
+            <div class="accomplishments-grid">
+                <div class="accomplishment-item">
+                    <div class="accomplishment-icon"><i class="fas fa-code"></i></div>
+                    <div class="accomplishment-content">
+                        <strong>Lucilla - 1.7M+ Lines of Code</strong>
+                        <p>Solo-built fitness platform with AI, Circle USDC wallets, multi-agent systems</p>
+                    </div>
+                </div>
+                <div class="accomplishment-item">
+                    <div class="accomplishment-icon"><i class="fab fa-google"></i></div>
+                    <div class="accomplishment-content">
+                        <strong>Google Cloud Partner & AI Innovate Program</strong>
+                        <p>Selected for Google's first-ever AI startup program (Summer 2025)</p>
+                    </div>
+                </div>
+                <div class="accomplishment-item">
+                    <div class="accomplishment-icon"><i class="fas fa-rocket"></i></div>
+                    <div class="accomplishment-content">
+                        <strong>Jason Calacanis Incubator Graduate</strong>
+                        <p>Completed prestigious VC startup incubator (Spring-Summer 2025)</p>
+                    </div>
+                </div>
+                <div class="accomplishment-item">
+                    <div class="accomplishment-icon"><i class="fas fa-circle"></i></div>
+                    <div class="accomplishment-content">
+                        <strong>Circle & Coinbase Early Access</strong>
+                        <p>ARC testnet pioneer - first smart contracts deployed (2025)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="resume-section">
+            <h2><i class="fas fa-code"></i> Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Mobile & Frontend</h3>
+                    <ul>
+                        <li>Flutter / Dart</li>
+                        <li>React / Next.js</li>
+                        <li>TypeScript / JavaScript</li>
+                        <li>HTML5 / CSS3 / Sass</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend & Cloud</h3>
+                    <ul>
+                        <li>Firebase (Firestore, Auth, Functions)</li>
+                        <li>Node.js / Express / Python</li>
+                        <li>Apache Kafka / Redis</li>
+                        <li>Google Cloud Platform</li>
+                        <li>REST APIs / GraphQL</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Web3 & AI/ML</h3>
+                    <ul>
+                        <li>Circle USDC / Blockchain</li>
+                        <li>Smart Contracts / ARC</li>
+                        <li>Gemini AI / Vertex AI / Claude</li>
+                        <li>XGBoost / LSTM / TFT Models</li>
+                        <li>PyTorch / scikit-learn</li>
+                        <li>Algorithmic Trading / MLOps</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="resume-section">
+            <h2><i class="fas fa-briefcase"></i> Experience</h2>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Founder & Lead Developer <span class="company">@ Lucilla Technologies</span></h3>
+                    <span class="date">2025 - Present</span>
+                </div>
+                <ul>
+                    <li>Solo-architected Lucilla with <strong>1.7M+ lines of production code</strong> - fitness platform with USDC payments</li>
+                    <li>Built for global scale: <strong>17 languages, 100+ countries</strong>, multi-currency support</li>
+                    <li>Integrated Circle Web3 Services for secure USDC wallet transactions</li>
+                    <li>Deployed AI voice agents and multi-agent systems using Gemini and Vertex AI</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Equities Trader <span class="company">@ Trading Firm</span></h3>
+                    <span class="date">2019 - 2023</span>
+                </div>
+                <ul>
+                    <li>Managed high-volume trades with over <strong>$250M+ in total trade volume</strong></li>
+                    <li>Processed large-scale datasets using Python, Java, and custom APIs</li>
+                    <li>Built computer vision tools for market analysis and pattern recognition</li>
+                    <li>Developed automated trading algorithms and real-time data pipelines using Apache Kafka</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Full Stack Developer <span class="company">@ Freelance</span></h3>
+                    <span class="date">2019 - Present</span>
+                </div>
+                <ul>
+                    <li>Delivered 10+ production mobile and web applications for diverse clients</li>
+                    <li>Specialized in Flutter cross-platform development and Firebase backend solutions</li>
+                    <li>Built e-commerce platforms, restaurant apps, and service business websites</li>
+                    <li>Implemented secure payment integrations with PCI-DSS compliance awareness</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="resume-section">
+            <h2><i class="fas fa-project-diagram"></i> Featured Projects</h2>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>Lucilla - Fitness Competition Platform</h3>
+                    <span class="date">lucilla.ca</span>
+                </div>
+                <p>Global fitness app with step-based challenges and real-money USDC stakes.</p>
+                <div class="tech-tags">
+                    <span>Flutter</span>
+                    <span>Firebase</span>
+                    <span>Circle USDC</span>
+                    <span>Gemini AI</span>
+                    <span>Web3</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>Telamar Trading & Research</h3>
+                    <span class="date">telamar.web.app</span>
+                </div>
+                <p><strong>24/7 autonomous crypto trading bot</strong> with multi-model ML ensemble (XGBoost, LSTM, TFT). Self-learning parameter optimization, economic calendar protection, ATR trailing stops. Trading 22 pairs on Binance Futures with Telegram Web App integration.</p>
+                <div class="tech-tags">
+                    <span>Python</span>
+                    <span>XGBoost</span>
+                    <span>LSTM</span>
+                    <span>TFT</span>
+                    <span>Flutter Web</span>
+                    <span>Telegram Bot</span>
+                    <span>GCP</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>Digital Banking Platform - Central America</h3>
+                    <span class="date">bankapp-de728.firebaseapp.com</span>
+                </div>
+                <p>Mobile & web banking app rivaling top Central American banks with modern, competitive financial services and secure transactions.</p>
+                <div class="tech-tags">
+                    <span>Flutter</span>
+                    <span>Firebase</span>
+                    <span>Plaid API</span>
+                    <span>Stripe</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>LabiosRojos by Nadia - E-Commerce</h3>
+                    <span class="date">nadia-4aa22.firebaseapp.com</span>
+                </div>
+                <p>Beauty & cosmetics e-commerce platform with inventory and loyalty programs.</p>
+                <div class="tech-tags">
+                    <span>Flutter</span>
+                    <span>Firebase</span>
+                    <span>Stripe</span>
+                    <span>Analytics</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>MiPollo - Restaurant Platform</h3>
+                    <span class="date">mipollo-56d90.web.app</span>
+                </div>
+                <p>Complete restaurant management with online ordering and delivery tracking.</p>
+                <div class="tech-tags">
+                    <span>Flutter</span>
+                    <span>Firebase</span>
+                    <span>Google Maps</span>
+                    <span>Push Notifications</span>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>CineLingua - AI Language Learning</h3>
+                    <span class="date">cine-lingua.vercel.app</span>
+                </div>
+                <p><strong>Agentics Foundation Hackathon 2025</strong> - Learn French through cinema with AI-powered tutoring. 8 Francophone regions, Gemini-generated vocabulary.</p>
+                <div class="tech-tags">
+                    <span>Gemini AI</span>
+                    <span>Next.js</span>
+                    <span>TV5 Monde</span>
+                    <span>Vercel</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Volunteer & Community -->
+        <section class="resume-section">
+            <h2><i class="fas fa-hands-helping"></i> Volunteer & Community</h2>
+            <div class="interests-grid">
+                <div class="interest-item">
+                    <i class="fas fa-futbol"></i>
+                    <span><strong>FIFA World Cup 2026</strong> - Registered Volunteer (Toronto)</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-robot"></i>
+                    <span><strong>Agentics Foundation</strong> - Active Member (2025)</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-utensils"></i>
+                    <span><strong>Eden Food Bank</strong> - Food Insecurity Volunteer</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-users"></i>
+                    <span><strong>Immigrants Working Centre</strong> - Settlement Support</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Certifications -->
+        <section class="resume-section">
+            <h2><i class="fas fa-graduation-cap"></i> Education & Certifications</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Software Development <span class="company">@ Mohawk College</span></h3>
+                    <span class="date">Sep 2019 – May 2020</span>
+                </div>
+                <p>Full-stack development, databases, and software engineering principles.</p>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Business/Commerce <span class="company">@ McMaster University</span></h3>
+                    <span class="date">Sep 2016 – May 2018</span>
+                </div>
+                <p>Finance, marketing, and entrepreneurship - foundation for fintech ventures.</p>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3>Certifications <span class="company">@ 2025</span></h3>
+                </div>
+                <div class="tech-tags">
+                    <span>Bloomberg Market Concepts</span>
+                    <span>MLOps for Generative AI</span>
+                    <span>Build Generative AI Agents with Vertex AI & Flutter</span>
+                    <span>Gemini for Data Scientists</span>
+                    <span>AI Agent Integration with Flutter</span>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
